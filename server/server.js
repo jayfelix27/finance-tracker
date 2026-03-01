@@ -7,9 +7,11 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: process.env.NODE_ENV === 'production' 
-      ? process.env.FRONTEND_URL 
-      : 'http://localhost:3000'
+    origin: [
+      'http://localhost:3000',
+      'https://finance-tracker-one-blond.vercel.app'
+    ],
+    credentials: true
   }));
 app.use(express.json());
 
