@@ -1,194 +1,96 @@
-Personal Finance Tracker
+#Personal Finance Tracker
 
 A full-stack web application for tracking income and expenses with real-time data visualization. Built using the MERN stack and deployed with Vercel and Render.
 
-Live Demo:
-https://finance-tracker-one-blond.vercel.app
+**Live Demo:** [finance-tracker-one-blond.vercel.app](https://finance-tracker-one-blond.vercel.app)
 
-Features
-Transaction Management
+## Features
 
-Add, view, and delete income or expense transactions.
+- Add, view, and delete income or expense transactions
+- Automatically calculates and updates current balance in real time
+- Interactive bar chart for Income vs Expenses
+- Interactive pie chart for Spending by Category
+- Category-based organization (Food, Transportation, Entertainment, Utilities, Other)
+- Modern dark-themed UI, responsive across desktop and mobile
+- All transactions securely stored using MongoDB Atlas
 
-Real-Time Balance Tracking
+## Tech Stack
 
-Automatically calculates and updates the user's current balance.
+- [React](https://react.dev/) — UI framework
+- [Chart.js](https://www.chartjs.org/) + [react-chartjs-2](https://react-chartjs-2.js.org/) — Data visualization
+- [Axios](https://axios-http.com/) — HTTP client for API requests
+- [Node.js](https://nodejs.org/) — Runtime environment
+- [Express.js](https://expressjs.com/) — Backend web framework
+- [MongoDB](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/) — Database and object modeling
+- [Vercel](https://vercel.com/) — Frontend hosting
+- [Render](https://render.com/) — Backend hosting
+- [MongoDB Atlas](https://www.mongodb.com/atlas) — Cloud database
 
-Data Visualization
+## Getting Started
 
-Interactive charts provide insights into spending patterns:
+### 1. Clone the repository
 
-Income vs Expenses – Bar chart
-
-Spending by Category – Pie chart
-
-Category-Based Organization
-
-Track spending across multiple categories such as:
-
-Food
-
-Transportation
-
-Entertainment
-
-Utilities
-
-Other
-
-Responsive Design
-
-Modern dark-themed UI that works across desktop and mobile devices.
-
-Persistent Data Storage
-
-All transactions are securely stored using MongoDB Atlas.
-
-Tech Stack
-Frontend
-
-React – UI framework
-
-Chart.js + react-chartjs-2 – Data visualization
-
-Axios – HTTP client for API requests
-
-CSS3 – Custom modern dark theme styling
-
-Backend
-
-Node.js – Runtime environment
-
-Express.js – Backend web framework
-
-MongoDB – NoSQL database
-
-Mongoose – MongoDB object modeling
-
-CORS – Cross-origin resource sharing
-
-Deployment
-
-Vercel – Frontend hosting
-
-Render – Backend hosting
-
-MongoDB Atlas – Cloud database
-
-Installation & Setup
-Prerequisites
-
-Make sure you have the following installed:
-
-Node.js (v14 or higher)
-
-Git
-
-MongoDB Atlas account (free tier)
-
-Clone the Repository
+```bash
 git clone https://github.com/jayfelix27/finance-tracker.git
 cd finance-tracker
-Backend Setup
+```
 
-Navigate to the server directory:
+### 2. Set up the backend
 
+```bash
 cd server
 npm install
+```
 
-Create a .env file:
+Create a `.env` file:
 
-touch .env
-
-Add the following environment variables:
-
+```
 MONGODB_URI=your_mongodb_connection_string
 PORT=5001
+```
 
 Start the backend server:
 
+```bash
 npm run dev
+```
 
-Backend will run on:
+Backend will run on [http://localhost:5001](http://localhost:5001)
 
-http://localhost:5001
-Frontend Setup
+### 3. Set up the frontend
 
-Navigate to the client directory:
-
+```bash
 cd ../client
 npm install
+```
 
-Create a .env file:
+Create a `.env` file:
 
-touch .env
-
-Add the following variable:
-
+```
 REACT_APP_API_URL=http://localhost:5001
+```
 
 Start the frontend:
 
+```bash
 npm start
+```
 
-Frontend will run on:
+Frontend will run on [http://localhost:3000](http://localhost:3000)
 
-http://localhost:3000
-Usage
-Add a Transaction
+## Usage
 
-Fill out the transaction form including:
+- **Add a Transaction** — Fill out the form with a description, amount, category, type (income or expense), and date
+- **View Balance** — Your current balance updates automatically at the top of the dashboard
+- **View Analytics** — Charts show spending by category and income vs expenses
+- **Delete Transactions** — Click the trash icon next to any transaction to remove it
 
-Description
+## Future Enhancements
 
-Amount
-
-Category
-
-Transaction type (income or expense)
-
-Date
-
-View Balance
-
-Your current balance updates automatically at the top of the dashboard.
-
-View Analytics
-
-Scroll down to view charts showing:
-
-Spending by category
-
-Income vs expenses
-
-Delete Transactions
-
-Click the trash icon next to a transaction to remove it.
-
-Design Features
-
-Dark Theme – Easy on the eyes with a modern UI
-
-Gradient Accents – Purple gradient highlights
-
-Smooth Animations – Hover effects and transitions
-
-Responsive Layout – Works across screen sizes
-
-Clean Typography – Clear hierarchy and readability
-
-Future Enhancements
-
-User authentication and individual accounts
-
-Date range filtering
-
-Export transaction data to CSV
-
-Monthly and yearly spending summaries
-
-Budget tracking and alerts
-
-Dark/light theme toggle
-
-Recurring transactions
+- User authentication and individual accounts
+- Date range filtering
+- Export transaction data to CSV
+- Monthly and yearly spending summaries
+- Budget tracking and alerts
+- Dark/light theme toggle
+- Recurring transactions
