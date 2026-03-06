@@ -1,70 +1,194 @@
-# Getting Started with Create React App
+Personal Finance Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for tracking income and expenses with real-time data visualization. Built using the MERN stack and deployed with Vercel and Render.
 
-## Available Scripts
+Live Demo:
+https://finance-tracker-one-blond.vercel.app
 
-In the project directory, you can run:
+Features
+Transaction Management
 
-### `npm start`
+Add, view, and delete income or expense transactions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Real-Time Balance Tracking
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Automatically calculates and updates the user's current balance.
 
-### `npm test`
+Data Visualization
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Interactive charts provide insights into spending patterns:
 
-### `npm run build`
+Income vs Expenses – Bar chart
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Spending by Category – Pie chart
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Category-Based Organization
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Track spending across multiple categories such as:
 
-### `npm run eject`
+Food
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Transportation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Entertainment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Utilities
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Other
 
-## Learn More
+Responsive Design
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Modern dark-themed UI that works across desktop and mobile devices.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Persistent Data Storage
 
-### Code Splitting
+All transactions are securely stored using MongoDB Atlas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Tech Stack
+Frontend
 
-### Analyzing the Bundle Size
+React – UI framework
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Chart.js + react-chartjs-2 – Data visualization
 
-### Making a Progressive Web App
+Axios – HTTP client for API requests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+CSS3 – Custom modern dark theme styling
 
-### Advanced Configuration
+Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Node.js – Runtime environment
 
-### Deployment
+Express.js – Backend web framework
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+MongoDB – NoSQL database
 
-### `npm run build` fails to minify
+Mongoose – MongoDB object modeling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CORS – Cross-origin resource sharing
+
+Deployment
+
+Vercel – Frontend hosting
+
+Render – Backend hosting
+
+MongoDB Atlas – Cloud database
+
+Installation & Setup
+Prerequisites
+
+Make sure you have the following installed:
+
+Node.js (v14 or higher)
+
+Git
+
+MongoDB Atlas account (free tier)
+
+Clone the Repository
+git clone https://github.com/jayfelix27/finance-tracker.git
+cd finance-tracker
+Backend Setup
+
+Navigate to the server directory:
+
+cd server
+npm install
+
+Create a .env file:
+
+touch .env
+
+Add the following environment variables:
+
+MONGODB_URI=your_mongodb_connection_string
+PORT=5001
+
+Start the backend server:
+
+npm run dev
+
+Backend will run on:
+
+http://localhost:5001
+Frontend Setup
+
+Navigate to the client directory:
+
+cd ../client
+npm install
+
+Create a .env file:
+
+touch .env
+
+Add the following variable:
+
+REACT_APP_API_URL=http://localhost:5001
+
+Start the frontend:
+
+npm start
+
+Frontend will run on:
+
+http://localhost:3000
+Usage
+Add a Transaction
+
+Fill out the transaction form including:
+
+Description
+
+Amount
+
+Category
+
+Transaction type (income or expense)
+
+Date
+
+View Balance
+
+Your current balance updates automatically at the top of the dashboard.
+
+View Analytics
+
+Scroll down to view charts showing:
+
+Spending by category
+
+Income vs expenses
+
+Delete Transactions
+
+Click the trash icon next to a transaction to remove it.
+
+Design Features
+
+Dark Theme – Easy on the eyes with a modern UI
+
+Gradient Accents – Purple gradient highlights
+
+Smooth Animations – Hover effects and transitions
+
+Responsive Layout – Works across screen sizes
+
+Clean Typography – Clear hierarchy and readability
+
+Future Enhancements
+
+User authentication and individual accounts
+
+Date range filtering
+
+Export transaction data to CSV
+
+Monthly and yearly spending summaries
+
+Budget tracking and alerts
+
+Dark/light theme toggle
+
+Recurring transactions
